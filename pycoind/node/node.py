@@ -229,7 +229,7 @@ class Node(BaseNode):
 
     def command_memory_pool(self, peer):
         inv = [protocol.InventoryVector(protocol.OBJECT_TYPE_MSG_TX, t.hash) for t in self._mempool]
-        per.send_message(inv)
+        peer.send_message(inv)
 
 
     def command_not_found(self, peer, inventory):

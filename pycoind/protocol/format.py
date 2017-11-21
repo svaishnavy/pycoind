@@ -679,7 +679,7 @@ class BlockHeader(CompoundType):
         return BlockHeader(block.version, block.previous_hash,
                            block.merkle_root, block.timestamp,
                            block.bits, block.nonce,
-                           len(block.transactions))
+                           block.txn_count)
 
     @property
     def hash(self):
